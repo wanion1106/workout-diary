@@ -31,7 +31,7 @@
                             <div class="col-md-6">
                                 <input id="avatar_img" type="file" class="form-control @error('avatar_img') is-invalid @enderror" name="avatar_img">
 
-                                @error('name')
+                                @error('avatar_img')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
