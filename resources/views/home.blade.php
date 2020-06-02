@@ -7,7 +7,14 @@
                 @include('_sidebar')
             </div>
             <div class="col-sm-10">
-                dashboard
+                @include('_tweet-form')
+
+                <div class="border">
+                    @include('_tweet')
+                    @include('_tweet')
+                    @include('_tweet')
+                    @include('_tweet')
+                </div>
             </div>
         </div>
     </div>
