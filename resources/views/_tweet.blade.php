@@ -9,9 +9,9 @@
     </div>
 
     <div>
-        <h5>username</h5>
+        <h5>{{ $post->user->name }}</h5>
 
-        <p>サンプルツイート</p>
+        <p>{{ $post->body }}</p>
     </div>
 
 </div>

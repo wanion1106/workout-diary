@@ -10,10 +10,9 @@
                 @include('_tweet-form')
 
                 <div class="border">
-                    @include('_tweet')
-                    @include('_tweet')
-                    @include('_tweet')
-                    @include('_tweet')
+                    @foreach ($posts as $post)
+                        @include('_tweet')
+                    @endforeach
                 </div>
             </div>
         </div>
