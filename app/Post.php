@@ -9,6 +9,8 @@ class Post extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['body', 'photo_img'];
+
     public function user()
     {
         return $this->belongsTo(User::class);

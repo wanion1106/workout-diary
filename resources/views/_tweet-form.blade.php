@@ -1,5 +1,5 @@
 <div class="border border-primary p-2 mb-4">
-    <form action="">
+    <form method="POST" action="{{ route('home.store') }}" enctype="multipart/form-data">
         @csrf
         <textarea name="body" class="form-control"></textarea>
 
@@ -12,6 +12,19 @@
             @else
                 <img src="/storage/avatars/{{ Auth::user()->avatar_img }}" width="40" class="rounded-circle">
             @endif
+
+            <input type="file" name="photo_img">
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+                </ul>
+            </div>
+            @endif
+
 
             <button type="submit" class="btn btn-primary shadow">投稿する</button>
 
