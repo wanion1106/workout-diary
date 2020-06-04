@@ -12,6 +12,10 @@
         <h5>{{ $post->user->name }}</h5>    
 
         <p>{{ $post->body }}</p>
+
+        @if($post->photo_img)
+            <img src="/storage/posts/{{ $post->photo_img }}">
+        @endif
     </div>
 
 </div>
