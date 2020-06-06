@@ -4,7 +4,7 @@
     </li>
 
     <li class="mb-2">
-        <a href="#">Timeline</a>
+        <a href="/home">Timeline</a>
     </li> 
 
     <li class="mb-2">
