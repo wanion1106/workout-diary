@@ -21,11 +21,13 @@
 
     </div>
 
-    <div class="d-flex justify-content-end">
-        <form method="POST" action="{{ route('posts.delete', $post->id) }}">
-            @csrf
-            <button type="submit" class="btn btn-danger">削除</button>
-        </form>
-    </div>
+    @if(Auth::id() === $post->user_id)
+        <div class="d-flex justify-content-end">
+            <form method="POST" action="{{ route('posts.delete', $post->id) }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">削除</button>
+            </form>
+        </div>
+    @endif
 
 </div>
