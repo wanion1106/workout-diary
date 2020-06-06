@@ -1,5 +1,5 @@
 <div class="border border-primary p-2 mb-4">
-    <form method="POST" action="{{ route('home.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())
             <div class="alert alert-danger">
