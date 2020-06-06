@@ -65,8 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $filePath = $data['avatar_img']->store('public/avatars');
-        $image = str_replace('public/avatars/', '', $filePath);
+        if(isset($data->avatar_img)){
+            $filePath = $data['avatar_img']->store('public/avatars');
+            $image = str_replace('public/avatars/', '', $filePath);
+    
+        } else {
+            $image = null;
+        }
 
         return User::create([
             'name' => $data['name'],

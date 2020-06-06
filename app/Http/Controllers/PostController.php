@@ -25,4 +25,14 @@ class PostController extends Controller
         return redirect()->to('/home');
 
     }
+
+    public function delete(Post $post)
+    {
+        if (Auth::id() !== $post->user_id){
+            abort(403);
+        }
+        $post->delete();
+
+        return redirect()->to('/home');
+    }
 }

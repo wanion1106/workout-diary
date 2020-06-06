@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('posts/store', 'PostController@store')->name('posts.store');
+Route::post('{post}/delete', 'PostController@delete')->name('posts.delete');
