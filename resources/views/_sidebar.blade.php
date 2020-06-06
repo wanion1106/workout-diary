@@ -1,17 +1,19 @@
-<ul>
-    <li class="mb-2">
-        <a href="/">TOP</a>
-    </li>
+<div class="sidebar">
+    <ul>
+        <li class="mb-2">
+            <a href="/">TOP</a>
+        </li>
 
-    <li class="mb-2">
-        <a href="/home">Timeline</a>
-    </li> 
+        <li class="mb-2">
+            <a href="/home">Timeline</a>
+        </li> 
 
-    <li class="mb-2">
-        <a href="#">MyDiary</a>
-    </li>
+        <li class="mb-2">
+            <a href="#">MyDiary</a>
+        </li>
 
-    <li class="mb-2">
-        <a href="#">Info</a>
-    </li>
-</ul>
+        <li class="mb-2">
+            <a href="#">Info</a>
+        </li>
+    </ul>
+</div>
