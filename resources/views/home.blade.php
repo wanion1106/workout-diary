@@ -14,6 +14,9 @@
                         @include('_tweet')
                     @endforeach
                 </div>
+
+                {{ $posts->links() }}
+
             </div>
         </div>
     </div>
