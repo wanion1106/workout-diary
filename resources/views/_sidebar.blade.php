@@ -9,7 +9,7 @@
         </li> 
 
         <li class="mb-2">
-            <a href="#">MyDiary</a>
+            <a href="/diary">MyDiary</a>
         </li>
 
         <li class="mb-2">
