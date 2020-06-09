@@ -41,4 +41,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    public function workoutrecord()
+    {
+        return $this->hasMany(WorkoutRecord::class);
+    }
+
 }

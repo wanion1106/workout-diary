@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <h5 class="card-title">筋トレ内容</h5>
                             <p class="card-text">行った筋トレの内容を記録していく所</p>
-                            <a href="#" class="btn btn-primary">記録する</a>
+                            <a href="/diary/workout_records" class="btn btn-primary">記録する</a>
                         </div>
                     </div>
 

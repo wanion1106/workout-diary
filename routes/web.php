@@ -19,9 +19,13 @@ Auth::routes();
 
 
 Route::middleware('auth')->group(function (){
+    //タイムラインへのルート
     Route::get('/home', 'PostController@index')->name('home');
     Route::post('posts/store', 'PostController@store')->name('posts.store');
     Route::post('{post}/delete', 'PostController@delete')->name('posts.delete');
+    //日記トップへのルート
     Route::get('/diary', 'DiaryController@index')->name('diary');
+    //筋トレ内容のルート
+    Route::get('/diary/workout_records', 'WorkoutRecordsController@index')->name('workout_records');
 });
 
