@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-10">
                 <div class="d-flex flex-wrap justify-content-center justify-content-around">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card mb-5" style="width: 18rem;">
                         <img class="card-img-top" src="/images/workout.png" width="100%" height="180">
                         <div class="card-body">
                             <h5 class="card-title">筋トレ内容</h5>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card mb-5" style="width: 18rem;">
                         <img class="card-img-top" src="/images/workout.png" width="100%" height="180">
                         <div class="card-body">
                             <h5 class="card-title">今日の自分</h5>
@@ -25,8 +25,10 @@
                             <a href="#" class="btn btn-primary">自撮りを追加する</a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card" style="width: 18rem;">
+                <div class="d-flex flex-wrap justify-content-center justify-content-around">
+                    <div class="card mb-5" style="width: 18rem;">
                         <img class="card-img-top" src="/images/workout.png" width="100%" height="180">
                         <div class="card-body">
                             <h5 class="card-title">自己評価</h5>
@@ -35,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card mb-5" style="width: 18rem;">
                         <img class="card-img-top" src="/images/workout.png" width="100%" height="180">
                         <div class="card-body">
                             <h5 class="card-title">今までの日記</h5>
