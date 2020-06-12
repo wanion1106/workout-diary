@@ -47,4 +47,9 @@ class User extends Authenticatable
         return $this->hasMany(WorkoutRecord::class);
     }
 
+    public function selfyrecord()
+    {
+        return $this->hasMany(SelfyRecord::class);
+    }
+
 }
