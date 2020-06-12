@@ -59,9 +59,6 @@
                         <button type="submit" class="btn btn-primary shadow">今日の内容として登録する</button>
                     </div>
 
-                    <div class="d-flex justify-content-end mt-2 mb-4">
-                        <a href="#" class="btn btn-primary shadow">過去の内容を表示</a>
-                    </div>
                 </form>
 
                 <div>
@@ -84,6 +81,10 @@
                         </div>
                         
                     @endforeach
+                </div>
+
+                <div class="d-flex justify-content-end mt-4 mb-4">
+                    <a href="#" class="btn btn-primary shadow">過去の内容を表示</a>
                 </div>
 
             </div>
