@@ -26,4 +26,11 @@ class WorkoutRecordsController extends Controller
 
         return redirect()->to('/diary/workout_records');
     }
+
+    public function delete(WorkoutRecord $workoutRecord)
+    {
+        $workoutRecord->delete();
+
+        return back();
+    }
 }

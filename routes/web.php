@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function (){
     //筋トレ内容のルート
     Route::get('/diary/workout_records', 'WorkoutRecordsController@index')->name('workout_records');
     Route::post('/diary/workout_records/store', 'WorkoutRecordsController@store')->name('workout_records.store');
-
+    Route::post('/diary/{workout_record}/delete', 'WorkoutRecordsController@delete')->name('workout_records.delete');
+    
 });
 

@@ -77,7 +77,13 @@
 
                             <p class="mr-4">{{ $workoutRecord->set }}セット</p>
 
-
+                            <div class="d-flex justify-content-end">
+                                <form method="POST" action="{{ route('workout_records.delete', $workoutRecord->id) }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">削除</button>
+                                </form>
+                            </div>
+                           
                         </div>
                         
                     @endforeach
