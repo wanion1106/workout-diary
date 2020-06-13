@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function (){
     Route::get('/diary/workout_records', 'WorkoutRecordsController@index')->name('workout_records');
     Route::post('/diary/workout_records/store', 'WorkoutRecordsController@store')->name('workout_records.store');
     Route::post('/diary/{workout_record}/delete', 'WorkoutRecordsController@delete')->name('workout_records.delete');
-    
+    //自撮り写真記録のルート
+    Route::get('/diary/selfy_records', 'SelfyRecordsController@index')->name('selfy_records');
 });
 

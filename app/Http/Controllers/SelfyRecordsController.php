@@ -8,5 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class SelfyRecordsController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('selfy-record');
+    }
 }

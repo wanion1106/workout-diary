@@ -22,7 +22,7 @@
                         <div class="card-body">
                             <h5 class="card-title">今日の自分</h5>
                             <p class="card-text">自分の写真を撮って体の変化を記録することができます</p>
-                            <a href="#" class="btn btn-primary">自撮りを追加する</a>
+                            <a href="/diary/selfy_records" class="btn btn-primary">自撮りを追加する</a>
                         </div>
                     </div>
                 </div>
