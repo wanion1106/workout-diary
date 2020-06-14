@@ -34,9 +34,11 @@
             
 
         </div>
+        
+        <div>
+        <button type="submit" class="btn btn-primary shadow">投稿する</button>
+        </div>
     </form>
 
-    <div>
-        <button type="submit" class="btn btn-primary shadow">投稿する</button>
-    </div>
+    
 </div>
