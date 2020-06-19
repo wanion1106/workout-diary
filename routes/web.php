@@ -32,5 +32,7 @@ Route::middleware('auth')->group(function (){
     //自撮り写真記録のルート
     Route::get('/diary/selfy_records', 'SelfyRecordsController@index')->name('selfy_records');
     Route::post('/diary/selfy_records/store', 'SelfyRecordsController@store')->name('selfy_records.store');
+    Route::post('/diary/selfy_records/{selfy_record}/delete', 'SelfyRecordsController@delete')->name('selfy_records.delete');
+
 });
 

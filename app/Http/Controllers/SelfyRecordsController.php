@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\http\Requests\SelfyRecordsRequest;
 use App\SelfyRecord;
-use Carbon\Carbon;
+//use Carbon\Carbon;
 
 
 class SelfyRecordsController extends Controller
 {
     public function index()
     {
-        $images = SelfyRecord::where('user_id', Auth::id())->latest()->get();
+        $selfyRecords = SelfyRecord::where('user_id', Auth::id())->latest()->get();
 
         return view('selfy-record',[
-            'images' => $images
+            'selfyRecords' => $selfyRecords
         ]);
     }
 
@@ -31,6 +31,13 @@ class SelfyRecordsController extends Controller
         
         $selfyRecord->user()->associate(Auth::user());
         $selfyRecord->save();
+
+        return back();
+    }
+
+    public function delete(SelfyRecord $selfyRecord)
+    {
+        $selfyRecord->delete();
 
         return back();
     }

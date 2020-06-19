@@ -11,7 +11,7 @@
                 <form method="POST" action="{{ route('selfy_records.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div>
-                        <label for="selfy_img" class="btn btn-secondary">
+                        <label for="selfy_img" class="btn btn-secondary d-flex justify-content-center">
                             +写真を追加
                             <input type="file" name="selfy_img" id="selfy_img" class="d-none">
                         </label>
@@ -26,12 +26,21 @@
                 <div>
                     <h5>今までの自分</h5>
 
-                    @foreach($images as $image)
+                    @foreach($selfyRecords as $selfyRecord)
                         <div>
-                            <img src="/storage/selfy/{{ $image->selfy_img }}">
-                            <p>何日前</p>
+                            <img src="/storage/selfy/{{ $selfyRecord->selfy_img }}">
+                            <p>{{ $selfyRecord->created_at }}</p>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <form method="POST" action="{{ route('selfy_records.delete', $selfyRecord->id) }}">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">削除</button>
+                            </form>
                         </div>
                     @endforeach
+
+
                 </div>
 
                 <div class="d-flex justify-content-end mt-4 mb-4">
