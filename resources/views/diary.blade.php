@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <h5 class="card-title">自己評価</h5>
                             <p class="card-text">今日行った、トレーニングについて一言書いてください。</p>
-                            <a href="#" class="btn btn-primary">一言書く</a>
+                            <a href="/diary/selfcheck_records" class="btn btn-primary">一言書く</a>
                         </div>
                     </div>
 
