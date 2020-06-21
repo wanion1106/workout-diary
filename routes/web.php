@@ -36,6 +36,8 @@ Route::middleware('auth')->group(function (){
     //自己評価記録のルート
     Route::get('/diary/selfcheck_records', 'SelfcheckRecordsController@index')->name('selfcheck_records');
     Route::post('/diary/selfcheck_records/store', 'SelfcheckRecordsController@store')->name('selfcheck_records.store');
+    //記録一覧表示のルート
+    Route::get('/diary/records', 'SearchController@index')->name('records.index');
 
 });
 
