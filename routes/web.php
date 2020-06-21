@@ -35,5 +35,7 @@ Route::middleware('auth')->group(function (){
     Route::post('/diary/selfy_records/{selfy_record}/delete', 'SelfyRecordsController@delete')->name('selfy_records.delete');
     //自己評価記録のルート
     Route::get('/diary/selfcheck_records', 'SelfcheckRecordsController@index')->name('selfcheck_records');
+    Route::post('/diary/selfcheck_records/store', 'SelfcheckRecordsController@store')->name('selfcheck_records.store');
+
 });
 

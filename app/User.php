@@ -52,4 +52,10 @@ class User extends Authenticatable
         return $this->hasMany(SelfyRecord::class);
     }
 
+    public function selfcheckrecord()
+    {
+        return $this->hasMany(SelfcheckRecord::class);
+    }
+
+
 }

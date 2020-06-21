@@ -10,4 +10,11 @@ class SelfcheckRecord extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['body'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
