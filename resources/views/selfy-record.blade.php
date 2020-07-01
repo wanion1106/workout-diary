@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end mt-4 mb-4">
-                    <a href="#" class="btn btn-primary shadow">特定の日時の写真を見る</a>
+                    <a href="/diary/records" class="btn btn-primary shadow">特定の日時の写真を見る</a>
                 </div>
             </div>
         </div>

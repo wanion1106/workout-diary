@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end mt-4 mb-4">
-                    <a href="#" class="btn btn-primary shadow">過去の内容を表示</a>
+                    <a href="/diary/records" class="btn btn-primary shadow">過去の内容を表示</a>
                 </div>
 
             </div>

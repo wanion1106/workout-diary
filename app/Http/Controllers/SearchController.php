@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
-use App\WorkoutRecord;
+use Illuminate\Support\Facades\Auth;
 
 class SearchController extends Controller
 {
@@ -19,17 +18,33 @@ class SearchController extends Controller
         {   
             //筋トレ記録から検索
             $workoutRecords = DB::table('workout_records')
-                    ->whereDate('created_at', $date)
-                    ->get();
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $date)
+            ->get();
+        
+
+            $selfyRecords = DB::table('selfy_records')
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $date)
+            ->get();
+
+            $selfcheckRecords = DB::table('selfcheck_records')
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $date)
+            ->get();
 
         }
         else
         {
             $workoutRecords = null;
+            $selfyRecords = null;
+            $selfcheckRecords = null;
         }
         //検索フォームへ
         return view('records',[
             'workoutRecords' => $workoutRecords,
+            'selfyRecords' => $selfyRecords,
+            'selfcheckRecords' => $selfcheckRecords,
             'date' => $date,
             ]);
     }

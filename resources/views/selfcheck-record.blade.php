@@ -22,7 +22,7 @@
                 </form>
 
                 <div class="d-flex justify-content-end mt-5 mb-4">
-                    <a href="#" class="btn btn-primary shadow">今までのコメントをみる</a>
+                    <a href="/diary/records" class="btn btn-primary shadow">今までのコメントをみる</a>
                 </div>
             </div>
         </div>

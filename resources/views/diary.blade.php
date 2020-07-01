@@ -42,7 +42,7 @@
                         <div class="card-body">
                             <h5 class="card-title">今までの日記</h5>
                             <p class="card-text">今までの日記を確認することができます。</p>
-                            <a href="#" class="btn btn-primary">自分の成長を確認する</a>
+                            <a href="/diary/records" class="btn btn-primary">自分の成長を確認する</a>
                         </div>
                     </div>
                 </div>
