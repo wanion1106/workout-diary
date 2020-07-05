@@ -29,7 +29,6 @@ Route::middleware('auth')->group(function (){
     Route::get('/diary/workout_records', 'WorkoutRecordsController@index')->name('workout_records');
     Route::post('/diary/workout_records/store', 'WorkoutRecordsController@store')->name('workout_records.store');
     Route::post('/diary/{workout_record}/delete', 'WorkoutRecordsController@delete')->name('workout_records.delete');
-    Route::post('/diary/{workout_record}/edit', 'WorkoutRecordsController@edit')->name('workout_records.edit');
 
     //自撮り写真記録のルート
     Route::get('/diary/selfy_records', 'SelfyRecordsController@index')->name('selfy_records');
@@ -40,6 +39,10 @@ Route::middleware('auth')->group(function (){
     Route::post('/diary/selfcheck_records/store', 'SelfcheckRecordsController@store')->name('selfcheck_records.store');
     //記録一覧表示のルート
     Route::get('/diary/records', 'SearchController@index')->name('records.index');
+    Route::post('/diary/records/{records}/edit', 'SearchController@edit')->name('records.edit');
+
+    //infoの表示
+    Route::get('/info', 'InfoController@index')->name('info');
 
 });
 

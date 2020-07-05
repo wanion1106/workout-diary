@@ -22,7 +22,6 @@ class SearchController extends Controller
             ->whereDate('created_at', $date)
             ->get();
         
-
             $selfyRecords = DB::table('selfy_records')
             ->where('user_id', Auth::id())
             ->whereDate('created_at', $date)
@@ -48,4 +47,5 @@ class SearchController extends Controller
             'date' => $date,
             ]);
     }
+
 }

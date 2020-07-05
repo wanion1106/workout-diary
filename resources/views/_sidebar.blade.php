@@ -13,7 +13,7 @@
         </li>
 
         <li class="mb-2">
-            <a href="#">Info</a>
+            <a href="/info">Info</a>
         </li>
     </ul>
 </div>
