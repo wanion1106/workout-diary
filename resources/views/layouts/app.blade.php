@@ -73,7 +73,7 @@
                                         @csrf
                                     </form>
 
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{ route('profile.edit', ['id' => Auth::user()->id]) }}">
                                         ユーザー編集
                                     </a>
                                 </div>

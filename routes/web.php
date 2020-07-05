@@ -43,6 +43,9 @@ Route::middleware('auth')->group(function (){
 
     //infoの表示
     Route::get('/info', 'InfoController@index')->name('info');
+    //プロフィール編集画面
+    Route::get('/profile/edit/{id}', 'ProfileController@edit')->name('profile.edit');
+    Route::post('/profile/update/{id}', 'ProfileController@update')->name('profile.update');
 
 });
 
