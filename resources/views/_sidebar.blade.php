@@ -1,10 +1,6 @@
 <div class="sidebar">
     <ul>
         <li class="mb-2">
-            <a href="/">TOP</a>
-        </li>
-
-        <li class="mb-2">
             <a href="/home">Timeline</a>
         </li> 
 

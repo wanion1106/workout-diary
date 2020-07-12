@@ -51,6 +51,32 @@
                 vertical-align: middle;
             text-align: center;
             }
+
+            ul, ol {
+                        padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
+                        margin: 10px;
+                        color: white;
+                    }
+                    
+            ul li, ol li {
+                line-height: 3.0; /*文の行高*/
+                padding: 0.5em 0; /*前後の文との余白*/
+                font-size: 24px;
+                }
+            body {
+                    /* 画像指定、imagesというフォルダ(ＣＳＳと同じ位置に作ったフォルダ)に入っている*/
+                    background-image: url(images/background_img.jpg);  
+                    /* 画像を常に上下左右の中央に配置させる */
+                    background-position: center center; 
+                    /* 画像を繰り返し表示しない */
+                    background-repeat: no-repeat;  
+                    /* ページなどのコンテンツの高さが画像の高さより大きい時動に固定する */
+                    background-attachment: fixed; 
+                    /* 画面、ブラウザのサイズに基づいて、背景画像を調整 */
+                    background-size: cover;  
+                    /* 背景画像が表示されるまでの間に表示される(待機中に表示される)背景のカラー */
+                    background-color: #000000; 
+                }
         </style>
 
     </head>
@@ -77,12 +103,13 @@
         
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 cover-img" style="background-image:url('/images/background_img.jpg');">
-                    
+                <div>
+                    <ul>
+                        <li>自分の成長を可視化出来る！！</li>
+                        <li>他の人がどんなトレーニングをしてるか見れる！！</li>
+                        <li>過去の記録も見れる！！</li>
+                    </ul>
 
-                    <div class="cover-text text-left">
-                        <p style="color: #fff;">ここがテキストですよ！！</p>
-                    </div>
                 </div>
             </div>
         </div>
