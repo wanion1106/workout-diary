@@ -11,8 +11,8 @@
             </div>
         @endif
 
-        <textarea name="body" class="form-control">
-        
+        <textarea name="body" class="form-control" rows="5">
+
 ーーーーーーーーーーーーーーー
 @foreach($workoutRecords as $workoutRecord) {{ $workoutRecord->item }}　@if (isset($workoutRecord->weight))　{{ $workoutRecord->weight }}kg　@endif　{{ $workoutRecord->rep }}回　{{ $workoutRecord->set }}セット
 @endforeach</textarea>
