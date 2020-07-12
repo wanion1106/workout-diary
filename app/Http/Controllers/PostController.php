@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PostRequest;
 use App\Post;
 use App\User;
+use App\WorkoutRecord;
 
 class PostController extends Controller
 {
@@ -18,10 +19,13 @@ class PostController extends Controller
     public function index(User $user)
     {
         $posts = Post::latest()->paginate(10);
+        $workoutRecords = WorkoutRecord::where('user_id', Auth::id())->whereDate('created_at', now())->latest()->get();
+
 
         return view('home',[
             'user' => $user,
-            'posts' => $posts
+            'posts' => $posts,
+            'workoutRecords' => $workoutRecords
         ]);
     }
 

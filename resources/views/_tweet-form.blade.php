@@ -11,7 +11,8 @@
             </div>
         @endif
 
-        <textarea name="body" class="form-control"></textarea>
+        <textarea name="body" class="form-control" 
+        value=""></textarea>
 
         <hr class="mt-0">
 

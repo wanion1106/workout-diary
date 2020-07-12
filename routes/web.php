@@ -39,8 +39,7 @@ Route::middleware('auth')->group(function (){
     Route::post('/diary/selfcheck_records/store', 'SelfcheckRecordsController@store')->name('selfcheck_records.store');
     //記録一覧表示のルート
     Route::get('/diary/records', 'SearchController@index')->name('records.index');
-    Route::post('/diary/records/{records}/edit', 'SearchController@edit')->name('records.edit');
-
+    Route::post('/diary/records/edit/{created_at}', 'SearchController@edit')->name('records.edit');
     //infoの表示
     Route::get('/info', 'InfoController@index')->name('info');
     //プロフィール編集画面

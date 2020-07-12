@@ -48,4 +48,23 @@ class SearchController extends Controller
             ]);
     }
 
+    public function edit ($created_at)
+    {
+        $workoutRecords = DB::table('workout_records')
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $created_at)
+            ->get();
+        
+        $selfyRecords = DB::table('selfy_records')
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $created_at)
+            ->get();
+
+        $selfcheckRecords = DB::table('selfcheck_records')
+            ->where('user_id', Auth::id())
+            ->whereDate('created_at', $created_at)
+            ->get();
+
+        return view('records-edit', compact('created_at', 'workoutRecords', 'selfyRecords', 'selfcheckRecords'));
+    }
 }

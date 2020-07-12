@@ -17,15 +17,7 @@
 
                 <div class="border">
                     <div class="m-4">
-                        <div class="d-flex justify-content-start">
-                            <h5>筋トレ内容</h5>
-
-                            <form method="POST" action="">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">編集</button>
-                            </form>
-                        </div>
-            
+                        <h5>筋トレ内容</h5>
                         @if($workoutRecords !== null)
                             @foreach ($workoutRecords as $workoutRecord)
 
@@ -47,14 +39,7 @@
                     </div>
 
                     <div class="m-4">
-                        <div class="d-flex justify-content-start">
-                            <h5>写真</h5>
-
-                            <form method="POST" action="">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">編集</button>
-                            </form>
-                        </div>
+                        <h5>写真</h5>
 
                         @if($selfyRecords != null)
 
@@ -65,22 +50,22 @@
                     </div>
 
                     <div class="m-4">
-                        <div class="d-flex justify-content-start">
-                            <h5>自己評価</h5>
-
-                            <form method="POST" action="">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">編集</button>
-                            </form>
-                        </div>
-
+                        <h5>自己評価</h5>
                         @if($selfcheckRecords != null)
                             @foreach($selfcheckRecords as $selfcheckRecord)
                                 <p>{{ $selfcheckRecord->body }}</p>
                             @endforeach
                         @endif
                     </div>
-
+                    <!--
+                        @if (isset($date))
+                        <form method="POST" action="{{ route('records.edit', ['created_at' => $date]) }}">
+                            @csrf
+                            <input type="hidden" name="date" value="{{ $date }}">
+                            <button type="submit" class="btn btn-danger">編集</button>
+                        </form>
+                    @endif
+                    -->
                 </div>
             </div>
         </div>
