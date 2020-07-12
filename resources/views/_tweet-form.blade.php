@@ -11,8 +11,11 @@
             </div>
         @endif
 
-        <textarea name="body" class="form-control" 
-        value=""></textarea>
+        <textarea name="body" class="form-control">
+        
+ーーーーーーーーーーーーーーー
+@foreach($workoutRecords as $workoutRecord) {{ $workoutRecord->item }}　@if (isset($workoutRecord->weight))　{{ $workoutRecord->weight }}kg　@endif　{{ $workoutRecord->rep }}回　{{ $workoutRecord->set }}セット
+@endforeach</textarea>
 
         <hr class="mt-0">
 
