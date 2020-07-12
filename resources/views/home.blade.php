@@ -9,7 +9,7 @@
             <div class="col-sm-10">
                 @include('_tweet-form')
 
-                <div class="border">
+                <div class="border border-dark">
                     @foreach ($posts as $post)
                         @include('_tweet')
                     @endforeach

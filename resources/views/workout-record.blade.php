@@ -7,11 +7,10 @@
                 @include('_sidebar')
             </div>
             <div class="col-sm-8">
-
                 <form method="POST" action="{{ route('workout_records.store') }}">
                     @csrf
-                    <div class="d-inline-flex justify-content-center border p-3 bg-light">
-                        <div class="mr-4 p-2">
+                    <div class="d-flex align-content-stretch flex-wrap border border-dark p-3">
+                        <div class="p-2">
                             <input type="text" name="item" class="@error('item') is-invalid @enderror" placeholder="種目名">
 
                             @error('item')
@@ -21,7 +20,7 @@
                             @enderror
                         </div>
 
-                        <div class="mr-4 p-2">
+                        <div class="p-2">
                             <input type="number" name="weight" class="@error('weight') is-invalid @enderror">kg
 
                             @error('weight')
@@ -31,7 +30,7 @@
                             @enderror
                         </div>
 
-                        <div class="mr-4 p-2">
+                        <div class="p-2">
                             <input type="number" name="rep" class="@error('rep') is-invalid @enderror">回
 
                             @error('rep')
@@ -41,7 +40,7 @@
                             @enderror
                         </div>
 
-                        <div class="mr-4 p-2">
+                        <div class="p-2">
                             <input type="number" name="set" class="@error('set') is-invalid @enderror">セット
 
 
@@ -66,7 +65,7 @@
 
                     @foreach ($workoutRecords as $workoutRecord)
 
-                        <div class="d-flex justify-content-center border p-2">
+                        <div class="d-flex justify-content-center border border-dark p-2">
                             <p class="mr-4">{{ $workoutRecord->item }}</p>
                             
                             @if (isset($workoutRecord->weight))

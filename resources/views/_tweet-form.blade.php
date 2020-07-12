@@ -1,4 +1,4 @@
-<div class="border border-primary p-2 mb-4">
+<div class="border border-dark p-2 mb-4">
     <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
         @csrf
         @if ($errors->any())

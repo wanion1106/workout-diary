@@ -15,13 +15,13 @@
                     </div>
                 </form>
 
-                <div class="border">
+                <div class="border border-dark">
                     <div class="m-4">
                         <h5>筋トレ内容</h5>
                         @if($workoutRecords !== null)
                             @foreach ($workoutRecords as $workoutRecord)
 
-                                <div class="d-flex justify-content-center border p-2">
+                                <div class="d-flex justify-content-center border border-dark p-2">
                                     <p class="mr-4">{{ $workoutRecord->item }}</p>
                                     
                                     @if (isset($workoutRecord->weight))

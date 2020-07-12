@@ -6,7 +6,7 @@
   .sidebar ul li, .sidebar ol li {
     color: black;
     border-left: solid 8px gray;/*左側の線*/
-    background: whitesmoke;/*背景色*/
+    background: #2F4F4F;/*背景色*/
     margin-bottom: 5px;/*下のバーとの余白*/
     line-height: 1.5;
     border-radius: 0 15px 15px 0;/*右側の角だけ丸く*/

@@ -1,15 +1,15 @@
 <div class="sidebar">
     <ul>
         <li class="mb-2">
-            <a href="/home">Timeline</a>
+            <a href="/home" style="color: white;">Timeline</a>
         </li> 
 
         <li class="mb-2">
-            <a href="/diary">MyDiary</a>
+            <a href="/diary" style="color: white;">MyDiary</a>
         </li>
 
         <li class="mb-2">
-            <a href="/info">Info</a>
+            <a href="/info" style="color: white;">Info</a>
         </li>
     </ul>
 </div>

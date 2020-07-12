@@ -1,4 +1,4 @@
-<div class="border-bottom p-3">
+<div class="border-bottom border-dark p-3">
     <div class="d-flex flex-row p-2">
         <div class="mr-1">
             @if($post->user->avatar_img == null)
