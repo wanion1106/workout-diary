@@ -16,8 +16,15 @@
 
         <hr class="mt-0">
 
-        <div class="d-flex">
-            <div class="mr-auto">
+        <div class="mr-2 d-flex justify-content-end">
+            <label for="photo_img" class="btn btn-secondary">
+                +写真を追加
+                <input type="file" name="photo_img" id="photo_img" class="d-none">
+            </label>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <div class="mr-2">
                 @if(Auth::user()->avatar_img == null)
                     <img src="/images/no_image.png" width="40" class="rounded-circle">
                 @else
@@ -26,19 +33,13 @@
             </div>
 
             <div class="mr-2">
-                <label for="photo_img" class="btn btn-secondary">
-                    +写真を追加
-                    <input type="file" name="photo_img" id="photo_img" class="d-none">
-                </label>
+                <button type="submit" class="btn btn-primary shadow">投稿する</button>
             </div>
-
-            
 
         </div>
         
-        <div>
-        <button type="submit" class="btn btn-primary shadow">投稿する</button>
-        </div>
+        
+        
     </form>
 
     
