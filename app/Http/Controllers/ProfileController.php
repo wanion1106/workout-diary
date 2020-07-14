@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\ProfileRequest;
-
-
+use Illuminate\Support\Facades\Storage;
 
 
 class ProfileController extends Controller
@@ -25,8 +24,9 @@ class ProfileController extends Controller
     public function update(ProfileRequest $request, $id)
     {
         if(isset($request->avatar_img)){
-            $filePath = $request->avatar_img->store('public/avatars');
-            $image = str_replace('public/avatars/', '', $filePath);
+            $filePath = $request->avatar_img;
+            $path = Storage::disk('s3')->putFile('/avatars', $filePath, 'public');
+            $image = Storage::disk('s3')->url($path);
     
         } else {
             $image = null;
