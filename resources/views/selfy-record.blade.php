@@ -28,7 +28,7 @@
 
                     @foreach($selfyRecords as $selfyRecord)
                         <div>
-                            <img src="/storage/selfy/{{ $selfyRecord->selfy_img }}">
+                            <img src="{{ $selfyRecord->selfy_img }}">
                             <p>{{ $selfyRecord->created_at }}</p>
                         </div>
 

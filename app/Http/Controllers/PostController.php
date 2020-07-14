@@ -8,6 +8,8 @@ use App\Http\Requests\PostRequest;
 use App\Post;
 use App\User;
 use App\WorkoutRecord;
+use Illuminate\Support\Facades\Storage;
+
 
 class PostController extends Controller
 {
@@ -33,8 +35,9 @@ class PostController extends Controller
     {
         if ($request->photo_img !== null)
         {
-            $filePath = $request->photo_img->store('public/posts');
-            $post->photo_img = str_replace('public/posts/', '', $filePath);
+            $filePath = $request->photo_img;
+            $path = Storage::disk('s3')->putFile('/posts', $filePath, 'public');
+            $post->photo_img = Storage::disk('s3')->url($path);
 
         }
         

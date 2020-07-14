@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -75,8 +76,9 @@ class RegisterController extends Controller
         }*/
 
         if(isset($data['avatar_img'])){
-            $filePath = $data['avatar_img']->store('public/avatars');
-            $image = str_replace('public/avatars/', '', $filePath);
+            $filePath = $data['avatar_img'];
+            $path = Storage::disk('s3')->putFile('/avatar', $filePath, 'public');
+            $image = Storage::disk('s3')->url($path);
     
         } else {
             $image = null;

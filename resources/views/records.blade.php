@@ -44,7 +44,7 @@
                         @if($selfyRecords != null)
 
                             @foreach($selfyRecords as $selfyRecord)
-                                <img src="/storage/selfy/{{ $selfyRecord->selfy_img }}">
+                                <img src="{{ $selfyRecord->selfy_img }}">
                             @endforeach
                         @endif
                     </div>

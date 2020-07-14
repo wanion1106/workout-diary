@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\SelfyRecordsRequest;
 use App\SelfyRecord;
 //use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 
 class SelfyRecordsController extends Controller
@@ -24,8 +25,9 @@ class SelfyRecordsController extends Controller
     {
         if ($request->selfy_img !== null)
         {
-            $filePath = $request->selfy_img->store('public/selfy');
-            $selfyRecord->selfy_img = str_replace('public/selfy/', '', $filePath);
+            $filePath = $request->selfy_img;
+            $path = Storage::disk('s3')->putFile('/', $filePath, 'public');
+            $selfyRecord->selfy_img = Storage::disk('s3')->url($path);
 
         }
         
