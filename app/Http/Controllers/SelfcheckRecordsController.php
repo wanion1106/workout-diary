@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\SelfcheckRecord;
-use App\http\Requests\SelfcheckRecordsRequest;
+use App\Http\Requests\SelfcheckRecordsRequest;
 
 
 
